@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Database (don’t commit local data)
+backend/app.db
+
+# OS
+Thumbs.db
+.DS_Store
