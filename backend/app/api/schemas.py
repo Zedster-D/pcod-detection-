@@ -31,6 +31,7 @@ class AssessmentCreateIn(BaseModel):
 
     # Medical inputs (from the UI)
     cycleRegularity: Literal["regular", "irregular", "absent", "heavy", ""] = ""
+    crampsSeverity: Literal["none", "mild", "moderate", "severe", ""] = ""
     symptoms: list[str] = Field(default_factory=list)
 
     exerciseDaysPerWeek: int = Field(ge=0, le=7)

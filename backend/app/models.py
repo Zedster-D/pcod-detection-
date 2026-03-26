@@ -42,6 +42,7 @@ class Assessment(Base):
     bmi: Mapped[float] = mapped_column(Float)
 
     cycle_regularity: Mapped[str] = mapped_column(String(20), default="", nullable=False)
+    cramps_severity: Mapped[str] = mapped_column(String(20), default="", nullable=False)
     symptoms: Mapped[list[str]] = mapped_column(JSON().with_variant(SQLiteJSON(), "sqlite"), default=list)
     family_history: Mapped[list[str]] = mapped_column(JSON().with_variant(SQLiteJSON(), "sqlite"), default=list)
 

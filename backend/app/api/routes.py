@@ -50,6 +50,7 @@ def create_assessment(payload: AssessmentCreateIn, db: Session = Depends(get_db)
         weight_kg=payload.weightKg,
         bmi=bmi,
         cycle_regularity=payload.cycleRegularity or "",
+        cramps_severity=payload.crampsSeverity or "",
         symptoms=payload.symptoms or [],
         family_history=payload.familyHistory or [],
         exercise_days_per_week=payload.exerciseDaysPerWeek,
